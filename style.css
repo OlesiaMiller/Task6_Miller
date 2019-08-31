@@ -1,11 +1,19 @@
+* {
+    box-sizing: border-box;
+}
 body {
     position: relative;
-    font-family: Helvetica Neue Bold Italic;
+    font-family: 'Muli', sans-serif;
+    /* display: inline-table; */
+}
+a {
+    text-decoration: none;
 }
 h1,
 header {
     color: white;
     text-align: center;
+    margin-top: 0;
 }
 h1 {
     font-size: 36pt;
@@ -15,8 +23,10 @@ h1 {
 h2 {
     font-size: 26pt;
     font-weight: bold;
-
+    
 }
+
+
 h2,
 p,
 div {
@@ -29,70 +39,176 @@ p {
     font-size: 20pt;
 }
 
-.header-text {
-    position: absolute;
-}
+.container {  
+width: 100%;
+padding-right: 30px;
+padding-left: 30px;
+margin-right: auto;
+margin-left: auto;
+/* position: relative; */
+} 
 
 .header {
-    position: relative;
     background-color: #de2b24;
-    width: 100%;
-    height: 800px;
+    height: auto;
+    padding-bottom: 130px;
 }
+  
+    /* @extend %section;
+  
+    &__title {
+      @extend %section-title;
+    }
+  
+    &__description {
+      @extend %section-description;
+    } */
+.blog .container {
+      padding-right: 30px;
+      padding-left: 30px;
+     
 
-.grid__container {
-    position: absolute;
-    max-width: 1025px;
-    height: 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    top:	50%;	
-    left:	50%;	
-    transform:	translate(-50%,	-50%);
-}
+    }
 
-.item-photo {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
+    .blog__title,
+    .contact__title {
+        margin-top: 100px;
+    }
+  
+  
+  
+  .blog-item__image {
+      padding: 0;
+      overflow: hidden;
+  }
+  
+  .blog-item__image img {
+        width: 100%;
+        height: 100%;
+      
+        transition: filter 0.5s, transform 0.5s;
+
+      }
+  
     
-}
+  
+      .blog-item__post {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #f35e59;
+  
+  
+    }
+  
+    .blog-item__date {
+      margin: 30px 0;
+      /* color: ($color-gray, 10%); */
+      font-size: 0.875rem;
+  
+  
+    }
+  
+    .blog-item__excerpt {
+      font-size: 0.875rem;
+      /* color: $color-gray; */
+      }
 
-.item-text {
-    width: 200px;
-    height: 200px;
-    background-color: #f35e59;
-    
-}
-
-.telegram {
+.blog__description::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
     margin: auto;
-}
+    margin-top: 15px;
+    margin-bottom: 50px;
+} 
+
 
 .main {
-    position: relative;
+    position: absolute;
     background-color: #1287bf;
-    height: 800px;
+    width: 100%;
+    height: 100%;
     color: white;
     text-align: center;
 }
 .contacts {
+    /* display: none; */
     position: relative;
-    max-width: 600px;
-    height: 400px;
+    width: 680px;
+    height: 0;
     background-color: #fff;
-    top:	50%;	
+    top: 250px;
     left:	50%;	
     transform:	translate(-50%,	-50%);
-    margin: 0;
+    transition: 0.5s;
     clip-path: polygon(50% 0, 56% 13%, 100% 13%, 100% 100%, 0 100%, 0 13%, 44% 13%);
+    /* padding-bottom: 70px; */
 }
+/* .fas:hover {
+    .contacts {
+        h450px;
+    }
+} */
 
 .fas{
-    font-size: 40px;
+    font-size: 65px;
 }
 
 .contacts__items {
-    position: relative;
+    /* position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacts__text {
+    display: block;
+    color: #8a8a8a;
+    font-size: 15px;
+    padding-top: 80px;
+}
+
+.contact__description {
+    margin-bottom: 20px;
+}
+
+.item {
+    display: block;
+    width: 450px;
+    height: 55px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #b6b1b1;
+    border-radius: 5px;
+    transition: 0.5s;
+   
+}
+
+.item:hover,
+.item:focus {
+    border-color: #1287bf;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.submit {
+    display: block;
+    width: 165px;
+    height: 50px;
+    background-color: #de2b24;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+}
+
+/*TODO
+.submit-text {
+ 
+
+    margin: 10px auto;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
