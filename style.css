@@ -299,6 +299,7 @@ p {
     height: 55px;
     background-color: #515151;
     margin-top: 35px;
+    border: none;
 }
 
 .footer__copyright {
@@ -395,6 +396,16 @@ p {
     .footer__content-social {
         width: 100%;
         left: 0;
+    }
+}
+
+@media (max-width: 470px) {
+    .contacts__description {
+        font-size: 12px;
+
+    }
+    .icon-link {
+        margin: 0 5px;
     }
 }
 
